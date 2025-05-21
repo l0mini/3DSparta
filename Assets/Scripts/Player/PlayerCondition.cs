@@ -11,6 +11,7 @@ public interface IDamagable
 public class PlayerCondition : MonoBehaviour, IDamagable
 {
     public UICondition uiCondition;
+    
 
     Condition health { get { return uiCondition.health; } }
     Condition stamina { get { return uiCondition.stamina; } }
@@ -19,7 +20,7 @@ public class PlayerCondition : MonoBehaviour, IDamagable
 
     private void Update()
     {
-        stamina.Add(stamina.passiveValue *  Time.deltaTime);
+        stamina.Add(stamina.passiveValue * Time.deltaTime);
 
         if(health.curValue == 0f)
         {

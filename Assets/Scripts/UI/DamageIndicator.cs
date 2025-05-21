@@ -15,7 +15,6 @@ public class DamageIndicator : MonoBehaviour
     {
         CharacterManager.Instance.Player.condition.onTakeDamage += Flash;
     }
-
     public void Flash()
     {
         if(coroutine != null)
