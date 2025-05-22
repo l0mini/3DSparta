@@ -18,8 +18,10 @@ public class ItemObject : MonoBehaviour, IInteractable
         return str;
     }
 
-    public void OnInteract()
+    public void OnInteract() //e키를 눌렀을때의 상호작용 함수
     {
-        
+        CharacterManager.Instance.Player.itemData = data;
+        CharacterManager.Instance.Player.addItem?.Invoke();
+        Destroy(gameObject);
     }
 }
