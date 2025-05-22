@@ -10,9 +10,16 @@ public enum ItemType
     Consumable
 }
 
+public enum ConsumableType
+{
+    Health,
+    Stamina
+}
+
 [Serializable]
 public class ItemDataConsumable
 {
+    public ConsumableType type;
     public float value;
 }
 
