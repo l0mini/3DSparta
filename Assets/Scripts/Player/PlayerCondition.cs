@@ -33,6 +33,11 @@ public class PlayerCondition : MonoBehaviour, IDamagable
         health.Add(amount);
     }
 
+    public void StaminaHeal(float amount)
+    {
+        stamina.Add(amount);
+    }
+
     public void Die()
     {
         Debug.Log("Á×À½");
