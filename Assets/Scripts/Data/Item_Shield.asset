@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Item_Shield
   m_EditorClassIdentifier: 
   displayName: "\uBC29\uD328"
-  description: "5\uCD08\uB3D9\uC548 \uACF5\uACA9\uC744 \uB9C9\uC544\uC90D\uB2C8\uB2E4"
+  description: "5\uD68C\uC758 \uACF5\uACA9\uC744 \uB9C9\uC544\uC90D\uB2C8\uB2E4."
   type: 1
   icon: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   dropPrefab: {fileID: 8689048368956790373, guid: 0b98830977c55484ca28340e830dde1a, type: 3}
