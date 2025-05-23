@@ -232,6 +232,38 @@ public class UIInventory : MonoBehaviour
     {
         return false;
     }
+
+    public void OnEquipButton()
+    {
+        if (slots[curEquipIndex].equipped)
+        {
+            UnEquip(curEquipIndex);
+        }
+
+        slots[selectedItemIndex].equipped = false;
+        curEquipIndex = selectedItemIndex;
+       // CharacterManager.Instance.Player.equip.EquipNew(selectedItem);
+        UpdataUI();
+
+        SelectItem(selectedItemIndex);
+    }
+
+    void UnEquip(int index)
+    {
+        slots[index].equipped = false ;
+       // CharacterManager.Instance.Player.equip.UnEquip();
+        UpdataUI() ;
+
+        if(selectedItemIndex == index)
+        {
+            SelectItem(selectedItemIndex);
+        }
+    }
+
+    public void OnUpEquipButton()
+    {
+        UnEquip(selectedItemIndex);
+    }
 }
 
 
