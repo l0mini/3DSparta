@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 curMovementInput;
     public float jumpPower;
     public LayerMask groundLayerMask;
+    public float useStamina;
 
     [Header("Look")]
     public Transform cameraContainer;
@@ -71,10 +72,13 @@ public class PlayerController : MonoBehaviour
     {
         if(context.phase == InputActionPhase.Started && IsGrounded())
         {
+            if (CharacterManager.Instance.Player.condition.UseStamina(useStamina))
+            {
             _rigidbody.AddForce(Vector2.up * jumpPower, ForceMode.Impulse);
+            }
         }
     }
-
+    
     private void Move()
     {
         Vector3 dir = transform.forward * curMovementInput.y + transform.right * curMovementInput.x;
